@@ -25,7 +25,7 @@ from cogs.utils.config import write_config_value
 '''Module for fun/meme commands commands'''
 
 
-class Utility:
+class Utility(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 

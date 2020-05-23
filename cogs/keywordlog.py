@@ -17,7 +17,7 @@ pre = ''
 '''Module for the keyword logger and chat history.'''
 
 
-class KeywordLogger:
+class KeywordLogger(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot

@@ -5,7 +5,7 @@ import hashlib
 from cogs.utils.config import write_config_value
 from discord.ext import commands
 
-class Track:
+class Track(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.url = "http://115.69.164.101:8080"

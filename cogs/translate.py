@@ -8,7 +8,7 @@ from discord.ext import commands
 '''Translator cog - Love Archit & Lyric'''
 
 
-class Translate:
+class Translate(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 

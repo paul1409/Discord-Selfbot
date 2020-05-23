@@ -10,7 +10,7 @@ import urllib.parse
 
 
 # Used Rapptz's implementation of google cards.
-class Google:
+class Google(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot

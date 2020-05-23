@@ -9,7 +9,7 @@ from cogs.utils.dataIO import dataIO
 '''Todo list cog.'''
 
 
-class Todo:
+class Todo(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot

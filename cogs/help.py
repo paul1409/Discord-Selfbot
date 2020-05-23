@@ -21,7 +21,7 @@ Pagination added by appu1232"""
 
 import discord
 from discord.ext import commands
-from discord.ext.commands import formatter
+from discord.ext.commands import HelpCommand
 import asyncio
 import sys
 import re
@@ -46,7 +46,7 @@ orig_help = None
 wiki_link = '\nAlternatively, you may want to check out [the wiki](https://github.com/appu1232/Discord-Selfbot/wiki) which also has the full list of in-built commands.'
 
 
-class Help(formatter.HelpFormatter):
+class Help(commands.Cog, commands.DefaultHelpCommand):
     """Formats help for commands."""
 
     def __init__(self, bot, *args, **kwargs):
@@ -220,7 +220,7 @@ class Help(formatter.HelpFormatter):
             return '**__{0}:__**'.format(cog) if cog is not None else '**__\u200bNo Category:__**'
 
         # Get subcommands for bot or category
-        filtered = await self.filter_command_list()
+        filtered = await self.filter_commands(self.bot.commands)
 
         if self.is_bot():
             # Get list of non-hidden commands for bot.

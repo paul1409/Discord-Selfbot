@@ -11,8 +11,8 @@ from cogs.utils.checks import parse_prefix
 """Cog for cog downloading."""
 
 
-class CogDownloading:
-
+class CogDownloading(commands.Cog):
+    
     def __init__(self, bot):
         self.bot = bot
 

@@ -4,7 +4,7 @@ from discord.ext import commands
 from cogs.utils.checks import load_moderation
 
 
-class Lockdown:
+class Lockdown(commands.Cog):
     """
     Channel lockdown commands.
 

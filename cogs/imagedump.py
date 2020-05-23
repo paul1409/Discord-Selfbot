@@ -13,7 +13,7 @@ from cogs.utils.checks import cmd_prefix_len
 '''Module for miscellaneous commands'''
 
 
-class Imagedump:
+class Imagedump(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot

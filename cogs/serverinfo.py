@@ -8,7 +8,7 @@ from cogs.utils.checks import embed_perms, cmd_prefix_len, hastebin
 '''Module for server commands.'''
 
 
-class Server:
+class Server(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
@@ -80,7 +80,7 @@ class Server:
                 em.add_field(name='Text Channels', value=str(channel_count))
                 em.add_field(name='Region', value=server.region)
                 em.add_field(name='Verification Level', value=str(server.verification_level))
-                em.add_field(name='Highest role', value=server.role_hierarchy[0])
+                em.add_field(name='Highest role', value=server.roles[-1])
                 em.add_field(name='Number of roles', value=str(role_count))
                 em.add_field(name='Number of emotes', value=str(emoji_count))
                 url = await hastebin(str(all), self.bot.session)

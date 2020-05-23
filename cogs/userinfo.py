@@ -5,7 +5,7 @@ from cogs.utils.checks import embed_perms, cmd_prefix_len
 '''Module for the info command.'''
 
 
-class Userinfo:
+class Userinfo(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
@@ -30,10 +30,7 @@ class Userinfo:
             else:
                 user = ctx.message.author
 
-            if user.avatar_url_as(static_format='png')[54:].startswith('a_'):
-                avi = user.avatar_url.rsplit("?", 1)[0]
-            else:
-                avi = user.avatar_url_as(static_format='png')
+            avi = user.avatar_url
             if isinstance(user, discord.Member):
                 role = user.top_role.name
                 if role == "@everyone":
@@ -81,10 +78,7 @@ class Userinfo:
         else:
             user = ctx.message.author
 
-        if user.avatar_url_as(static_format='png')[54:].startswith('a_'):
-            avi = user.avatar_url.rsplit("?", 1)[0]
-        else:
-            avi = user.avatar_url_as(static_format='png')
+        avi = user.avatar_url
         if embed_perms(ctx.message):
             em = discord.Embed(colour=0x708DD0)
             em.set_image(url=avi)

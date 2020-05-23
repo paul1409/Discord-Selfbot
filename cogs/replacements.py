@@ -7,7 +7,7 @@ from cogs.utils.menu import Menu
 '''Manage replacements within messages.'''
 
 
-class Replacements:
+class Replacements(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot

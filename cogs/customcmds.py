@@ -8,7 +8,7 @@ from cogs.utils.checks import cmd_prefix_len, load_config, hastebin
 '''Module for custom commands adding, removing, and viewing.'''
 
 
-class Customcmds:
+class Customcmds(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 

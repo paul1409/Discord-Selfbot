@@ -6,7 +6,7 @@ from requests.structures import CaseInsensitiveDict
 from cogs.utils.checks import embed_perms
 
 
-class FriendCodes:
+class FriendCodes(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot

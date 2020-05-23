@@ -6,7 +6,7 @@ from cogs.utils.checks import get_user
 '''Module for moderator commands.'''
 
 
-class Mod:
+class Mod(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot

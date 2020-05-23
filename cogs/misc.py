@@ -15,7 +15,7 @@ from cogs.utils.checks import embed_perms, cmd_prefix_len, parse_prefix, get_use
 '''Module for miscellaneous commands'''
 
 
-class Misc:
+class Misc(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
